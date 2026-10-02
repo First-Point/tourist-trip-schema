@@ -1,0 +1,87 @@
+{
+  "description": "One untitled day becomes the trip's own itinerary. Times give departure and arrival; HH:MM is canonicalized to HH:MM:SS. Blank rows are dropped.",
+  "input": {
+    "name": "  Sultanahmet Highlights  ",
+    "description": "A half-day walk through the historic peninsula.",
+    "url": "https://example.com/tours/sultanahmet",
+    "image": "https://example.com/img/sultanahmet.jpg",
+    "touristType": [
+      "History enthusiasts"
+    ],
+    "days": [
+      {
+        "stops": [
+          {
+            "name": "Hagia Sophia",
+            "time": "09:00",
+            "geo": {
+              "latitude": 41.0086,
+              "longitude": 28.9802
+            }
+          },
+          {
+            "name": "",
+            "description": "   "
+          },
+          {
+            "name": "Basilica Cistern",
+            "time": "10:30",
+            "address": "Alemdar, Yerebatan Cd. 1/3, 34110 Fatih/Istanbul"
+          },
+          {
+            "name": "Lunch",
+            "type": "Place",
+            "time": "12:15:00"
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Sultanahmet Highlights",
+    "description": "A half-day walk through the historic peninsula.",
+    "url": "https://example.com/tours/sultanahmet",
+    "image": "https://example.com/img/sultanahmet.jpg",
+    "touristType": "History enthusiasts",
+    "departureTime": "09:00:00",
+    "arrivalTime": "12:15:00",
+    "itinerary": {
+      "@type": "ItemList",
+      "numberOfItems": 3,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "TouristAttraction",
+            "name": "Hagia Sophia",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 41.0086,
+              "longitude": 28.9802
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "TouristAttraction",
+            "name": "Basilica Cistern",
+            "address": "Alemdar, Yerebatan Cd. 1/3, 34110 Fatih/Istanbul"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Place",
+            "name": "Lunch"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "input": "just a string",
+  "issues": [
+    {
+      "path": "name",
+      "code": "required"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "input": {
+    "name": "T",
+    "offers": [
+      {
+        "price": "1.234,50",
+        "priceCurrency": "euro"
+      },
+      {
+        "price": -5,
+        "priceCurrency": "USD"
+      },
+      {
+        "priceCurrency": "USD"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "path": "offers[0].price",
+      "code": "invalid_price"
+    },
+    {
+      "path": "offers[0].priceCurrency",
+      "code": "invalid_currency"
+    },
+    {
+      "path": "offers[1].price",
+      "code": "invalid_price"
+    },
+    {
+      "path": "offers[2].price",
+      "code": "required"
+    }
+  ]
+}

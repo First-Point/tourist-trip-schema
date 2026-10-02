@@ -1,0 +1,11 @@
+{
+  "description": "Only a name. No itinerary is emitted.",
+  "input": {
+    "name": "Old Town Walk"
+  },
+  "expected": {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Old Town Walk"
+  }
+}

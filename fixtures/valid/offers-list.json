@@ -1,0 +1,38 @@
+{
+  "description": "Offers given as a list stay a list, even with one entry. A Person provider. Fully blank offer rows are dropped.",
+  "input": {
+    "name": "Private Guiding",
+    "provider": {
+      "type": "Person",
+      "name": "Ayse Yilmaz"
+    },
+    "offers": [
+      {
+        "price": 0,
+        "priceCurrency": "TRY",
+        "name": "Children under 6"
+      },
+      {
+        "price": "",
+        "priceCurrency": ""
+      }
+    ]
+  },
+  "expected": {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Private Guiding",
+    "provider": {
+      "@type": "Person",
+      "name": "Ayse Yilmaz"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "TRY",
+        "name": "Children under 6"
+      }
+    ]
+  }
+}

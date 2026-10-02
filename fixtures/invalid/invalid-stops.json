@@ -1,0 +1,62 @@
+{
+  "input": {
+    "name": "T",
+    "days": [
+      {
+        "stops": [
+          {
+            "name": "",
+            "time": "09:00"
+          },
+          {
+            "name": "A",
+            "time": "25:00",
+            "type": "Restaurant"
+          },
+          {
+            "name": "B",
+            "geo": {
+              "latitude": 91,
+              "longitude": "east"
+            }
+          },
+          {
+            "name": "C",
+            "time": "2026-13-01T10:00",
+            "image": "/relative.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "issues": [
+    {
+      "path": "days[0].stops[0].name",
+      "code": "required"
+    },
+    {
+      "path": "days[0].stops[1].type",
+      "code": "invalid_type"
+    },
+    {
+      "path": "days[0].stops[1].time",
+      "code": "invalid_time"
+    },
+    {
+      "path": "days[0].stops[2].geo.latitude",
+      "code": "out_of_range"
+    },
+    {
+      "path": "days[0].stops[2].geo.longitude",
+      "code": "required"
+    },
+    {
+      "path": "days[0].stops[3].time",
+      "code": "invalid_time"
+    },
+    {
+      "path": "days[0].stops[3].image",
+      "code": "invalid_url"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "input": {
+    "name": "T",
+    "provider": {
+      "type": "Company",
+      "url": "https://example.com"
+    }
+  },
+  "issues": [
+    {
+      "path": "provider.type",
+      "code": "invalid_type"
+    },
+    {
+      "path": "provider.name",
+      "code": "required"
+    }
+  ]
+}

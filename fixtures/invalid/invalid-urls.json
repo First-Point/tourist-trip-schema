@@ -1,0 +1,28 @@
+{
+  "input": {
+    "name": "T",
+    "url": "example.com/tour",
+    "image": [
+      "https://ok.example/a.jpg",
+      "javascript:alert(1)"
+    ],
+    "provider": {
+      "name": "P",
+      "url": "ftp://example.com"
+    }
+  },
+  "issues": [
+    {
+      "path": "url",
+      "code": "invalid_url"
+    },
+    {
+      "path": "image[1]",
+      "code": "invalid_url"
+    },
+    {
+      "path": "provider.url",
+      "code": "invalid_url"
+    }
+  ]
+}

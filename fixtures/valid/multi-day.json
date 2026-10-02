@@ -1,0 +1,127 @@
+{
+  "description": "Several days become one subTrip each. A day with a single timed stop has a departure time only. Provider, one offer object and multiple images.",
+  "input": {
+    "name": "Cappadocia in Two Days",
+    "image": [
+      "https://example.com/a.jpg",
+      "https://example.com/b.jpg"
+    ],
+    "provider": {
+      "name": "Example Tours",
+      "url": "https://example.com"
+    },
+    "offers": {
+      "price": "189.50",
+      "priceCurrency": "eur"
+    },
+    "days": [
+      {
+        "name": "Day 1: Valleys",
+        "stops": [
+          {
+            "name": "Goreme Open-Air Museum",
+            "time": "09:30",
+            "url": "https://example.com/goreme"
+          },
+          {
+            "name": "Love Valley",
+            "time": "15:00"
+          }
+        ]
+      },
+      {
+        "name": "Day 2: Underground",
+        "description": "Early start.",
+        "stops": [
+          {
+            "name": "Derinkuyu Underground City",
+            "time": "2026-05-02T08:00:00+03:00",
+            "geo": {
+              "latitude": "38.3735",
+              "longitude": "34.7351"
+            }
+          }
+        ]
+      },
+      {
+        "name": "",
+        "stops": []
+      }
+    ]
+  },
+  "expected": {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Cappadocia in Two Days",
+    "image": [
+      "https://example.com/a.jpg",
+      "https://example.com/b.jpg"
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Example Tours",
+      "url": "https://example.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": 189.5,
+      "priceCurrency": "EUR"
+    },
+    "subTrip": [
+      {
+        "@type": "Trip",
+        "name": "Day 1: Valleys",
+        "departureTime": "09:30:00",
+        "arrivalTime": "15:00:00",
+        "itinerary": {
+          "@type": "ItemList",
+          "numberOfItems": 2,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "TouristAttraction",
+                "name": "Goreme Open-Air Museum",
+                "url": "https://example.com/goreme"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "TouristAttraction",
+                "name": "Love Valley"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Trip",
+        "name": "Day 2: Underground",
+        "description": "Early start.",
+        "departureTime": "2026-05-02T08:00:00+03:00",
+        "itinerary": {
+          "@type": "ItemList",
+          "numberOfItems": 1,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "TouristAttraction",
+                "name": "Derinkuyu Underground City",
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 38.3735,
+                  "longitude": 34.7351
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

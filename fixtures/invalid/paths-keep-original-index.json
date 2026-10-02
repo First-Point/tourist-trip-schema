@@ -1,0 +1,32 @@
+{
+  "input": {
+    "name": "T",
+    "days": [
+      {
+        "name": "",
+        "stops": []
+      },
+      {
+        "stops": [
+          {
+            "name": ""
+          },
+          {
+            "name": "",
+            "url": "nope"
+          }
+        ]
+      }
+    ]
+  },
+  "issues": [
+    {
+      "path": "days[1].stops[1].name",
+      "code": "required"
+    },
+    {
+      "path": "days[1].stops[1].url",
+      "code": "invalid_url"
+    }
+  ]
+}

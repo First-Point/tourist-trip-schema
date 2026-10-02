@@ -1,0 +1,11 @@
+{
+  "input": {
+    "name": "   "
+  },
+  "issues": [
+    {
+      "path": "name",
+      "code": "required"
+    }
+  ]
+}

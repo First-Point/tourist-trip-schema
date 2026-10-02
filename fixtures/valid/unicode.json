@@ -1,0 +1,36 @@
+{
+  "description": "Non-Latin and right-to-left text passes through unchanged.",
+  "input": {
+    "name": "جولة في إسطنبول",
+    "description": "Ayasofya'dan Kapalıçarşı'ya — 東京 & 京都",
+    "days": [
+      {
+        "stops": [
+          {
+            "name": "Kapalıçarşı"
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "جولة في إسطنبول",
+    "description": "Ayasofya'dan Kapalıçarşı'ya — 東京 & 京都",
+    "itinerary": {
+      "@type": "ItemList",
+      "numberOfItems": 1,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "TouristAttraction",
+            "name": "Kapalıçarşı"
+          }
+        }
+      ]
+    }
+  }
+}
