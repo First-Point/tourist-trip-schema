@@ -101,4 +101,5 @@ and PHP, Python and Ruby ports are planned against it
 ## License
 
 MIT. Maintained by [Your Next Tours](https://yournext.tours), the
-live audio guide system for tour groups.
+live audio guide system for tour groups, built by
+[First Point](https://firstpoint.com.tr).
